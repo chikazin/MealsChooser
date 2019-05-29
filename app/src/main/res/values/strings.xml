@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Meals Chooser</string>
+    <string name="menu2">老妈烫饭\n酸辣粉\n一食堂一楼\n一食堂二楼\n二食堂二楼\n石锅拌饭\n烤肉饭\n木桶饭\n校外\n外卖</string>
+    <string name="menu1">木须肉\n香辣虾\n红烧狮子头\n小鸡炖蘑菇\n糖醋里脊\n土豆炖牛肉\n板栗烧鸡\n糖醋鱼肉丸\n梅菜扣肉\n京酱肉丝\n红烧带鱼\n大盘鸡\n红烧鸡翅\n醋溜白菜\n香辣蟹\n地三鲜\n东坡肉</string>
+    <string name="button">点击选择, 长按添加</string>
+    <string name="result">随机选择生成</string>
+    <string name="background_name">background</string>
+</resources>
