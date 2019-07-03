@@ -58,10 +58,11 @@ public class Acitivity1 extends AppCompatActivity {
                 tempList = new ArrayList();
                 tempList = Arrays.asList(menu);
                 // TODO(kazin)写成 tempList = Arrays.aList(menu) 会导致list.add("新数据") 时抛出不支持运算异常(java.lang.UnsupportedOperationException)
+
             }
         }catch (Exception e){
             e.printStackTrace();
-            Log.e("line58", ""+e);
+            Log.e("line58",""+e);
             if(tempList == null){
                 tempList = new ArrayList();
                 tempList = Arrays.asList(menu);
@@ -69,7 +70,8 @@ public class Acitivity1 extends AppCompatActivity {
         }
 
         pracList = Collections.emptyList();
-        pracList = tempList;
+        pracList = new ArrayList<String>(tempList);
+        // TODO(kazin) 对Arrays.asList()返回的抽象类进行转型ArrayList<String>的转型, 使之具有add和remove方法
 
         final ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(
                 Acitivity1.this, android.R.layout.simple_list_item_1, pracList);
@@ -86,6 +88,7 @@ public class Acitivity1 extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         //TODO 删除操作
+
                         pracList.remove(position);
                         save(pracList);
                         Log.e("line84", ""+pracList);
@@ -139,7 +142,6 @@ public class Acitivity1 extends AppCompatActivity {
                             public void run() {
                                 // TODO(kazin) 下面一行防止界面被输入法挤压
                                 getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
-
                                 InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                                 inputMethodManager.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);
                             }

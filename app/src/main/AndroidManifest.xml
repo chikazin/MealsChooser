@@ -15,7 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:fullBackupContent="@xml/backup_descriptor">
-        <activity android:name=".Acitivity1">
+        <activity android:name=".Acitivity1"
+            android:screenOrientation="portrait">
+            <!--强制竖屏显示portrait; 横屏landscape-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
